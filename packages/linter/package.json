@@ -14,6 +14,9 @@
     "build": "yarn service -f cjs,esm",
     "dev": "yarn build -w --no-compress"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@types/eslint": "^7.2.6",
     "@types/jest": "^26.0.19",
@@ -39,5 +42,6 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.21.5",
     "ts-lib": "^0.0.5"
-  }
+  },
+  "gitHead": "449b2af2ba7d5bf7f644ca8f02ecaf43f5ffe728"
 }

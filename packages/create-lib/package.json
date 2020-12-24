@@ -8,6 +8,9 @@
   "main": "lib/index.js",
   "module": "lib/index.module.js",
   "types": "lib/src/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "jest",
     "service": "rimraf lib & microbundle --alias @=. --tsconfig tsconfig.build.json",
@@ -36,5 +39,6 @@
     "commander": "^6.2.1",
     "fs-extra": "^9.0.1",
     "ts-lib": "^0.0.5"
-  }
+  },
+  "gitHead": "449b2af2ba7d5bf7f644ca8f02ecaf43f5ffe728"
 }
