@@ -23,11 +23,8 @@
   "private": true,
   "workspaces": ["packages/*"],
   "lint-staged": {
-    "*.{js,jsx,less,md,json}": [
-      "prettier --write"
-    ],
-    "*.ts?(x)": [
-      "prettier --parser=typescript --write"
+    "packages/**/*.{js,ts,tsx,jsx}": [
+      "eslint --fix"
     ]
   },
   "name": "sally"
