@@ -16,14 +16,8 @@ export const pro = async (name: string) => {
   const src = join(__dirname, "../templates/root-project")
   try {
     await copy(src, cwd)
-    await git().cwd(cwd).init()
 
     const pkg = getPkg(cwd)
-
-    const command = spawn("npx", ["lerna", "bootstrap"], {
-      stdio: "inherit",
-      cwd,
-    })
 
     pkg.name = name
 
@@ -31,6 +25,13 @@ export const pro = async (name: string) => {
       join(cwd, "package.json"),
       JSON.stringify(pkg, undefined, 2)
     )
+
+    await git().cwd(cwd).init()
+
+    const command = spawn("npx", ["lerna", "bootstrap"], {
+      stdio: "inherit",
+      cwd,
+    })
 
     command.on("close", () => {})
   } catch (e) {

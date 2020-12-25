@@ -11,6 +11,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "templates",
+    "lib"
+  ],
   "scripts": {
     "test": "jest",
     "service": "rimraf lib & microbundle --alias @=. --tsconfig tsconfig.build.json",
