@@ -17,6 +17,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "preferGlobal": true,
+  "bin": {
+    "sally-linter": "lib/code-linter.js"
+  },
   "devDependencies": {
     "@types/eslint": "^7.2.6",
     "@types/jest": "^26.0.19",
@@ -34,6 +38,7 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.11.0",
     "@typescript-eslint/parser": "^4.11.0",
+    "commander": "^6.2.1",
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-config-standard": "^16.0.2",

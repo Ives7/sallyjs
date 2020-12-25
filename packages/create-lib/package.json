@@ -15,7 +15,8 @@
     "templates",
     "lib",
     "templates/package/src",
-    "templates/root-project/packages"
+    "templates/root-project/packages",
+    "templates/root-project/.gitignore"
   ],
   "scripts": {
     "test": "jest",

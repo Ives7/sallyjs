@@ -28,7 +28,7 @@ export const pro = async (name: string) => {
 
     await git().cwd(cwd).init()
 
-    const command = spawn("npx", ["lerna", "bootstrap"], {
+    const command = spawn("yarn", ["install"], {
       stdio: "inherit",
       cwd,
     })

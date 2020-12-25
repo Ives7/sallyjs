@@ -1,3 +1,2 @@
-#!/usr/bin/env node
+//import "./main"
 export * from "./eslint.config"
-export * from "./main"
