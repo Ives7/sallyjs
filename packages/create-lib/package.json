@@ -13,7 +13,9 @@
   },
   "files": [
     "templates",
-    "lib"
+    "lib",
+    "templates/package/src",
+    "templates/root-project/packages"
   ],
   "scripts": {
     "test": "jest",

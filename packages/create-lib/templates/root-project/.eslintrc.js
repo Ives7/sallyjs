@@ -1,3 +1,3 @@
-const { baseConfig } = require('@sallyjs/linter')
+const { baseConfig } = require("@sallyjs/linter")
 
 module.exports = baseConfig
