@@ -30,6 +30,6 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
-    "ts-lib": "^0.0.5"
+    "tslib": "^2.0.3"
   }
 }

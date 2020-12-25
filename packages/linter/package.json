@@ -43,7 +43,7 @@
     "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.21.5",
-    "ts-lib": "^0.0.5"
+    "tslib": "^2.0.3"
   },
   "gitHead": "8d6797c96f9fa45a7d5470438184f5c9e3159a6d"
 }

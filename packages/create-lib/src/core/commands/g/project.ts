@@ -1,9 +1,11 @@
 import { join, resolve } from "path"
+import git from "simple-git"
 import { copy, writeFile } from "fs-extra"
+const { spawn } = require("child_process")
 
 const getPkg = (dest: string) => {
   try {
-    require(join(dest, "package.json"))
+    return require(join(dest, "package.json"))
   } catch (e) {
     return {} as any
   }
@@ -12,12 +14,12 @@ const getPkg = (dest: string) => {
 export const pro = async (name: string) => {
   const cwd = resolve(name)
   const src = join(__dirname, "../templates/root-project")
-
   try {
     await copy(src, cwd)
-    const { spawn } = require("child_process")
+    await git().cwd(cwd).init()
 
     const pkg = getPkg(cwd)
+
     const command = spawn("npx", ["lerna", "bootstrap"], {
       stdio: "inherit",
       cwd,
@@ -31,5 +33,7 @@ export const pro = async (name: string) => {
     )
 
     command.on("close", () => {})
-  } catch (e) {}
+  } catch (e) {
+    console.log(e)
+  }
 }

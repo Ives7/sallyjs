@@ -1,13 +1,29 @@
 {
   "devDependencies": {
     "@sallyjs/linter":"^0.0.8",
+    "husky": "^5.0.6",
+    "lint-staged": "^10.5.3",
     "lerna": "^3.22.1",
     "prettier": "^2.2.1",
     "typescript": "^4.1.3"
   },
+  "dependencies": {
+    "tslib": "^2.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": ["packages/*"],
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
   "name": "sally"
 }
