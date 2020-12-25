@@ -28,7 +28,6 @@ export const pack = async (target: string) => {
 
     packagePkg.name = fullName
     await writeFile(packagePkgPath, JSON.stringify(packagePkg, undefined, 2))
-    await mkdir(join(dest, "src"))
     command.on("close", () => {})
   } catch (e) {
     console.log(e)
