@@ -10,7 +10,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest",
-    "service": "rimraf lib & microbundle --alias @=. --tsconfig tsconfig.build.json",
+    "service": "rimraf lib & microbundle --alias @=. --tsconfig tsconfig.build.json --jsx 'React.createElement'",
     "build": "yarn service -f umd,esm",
     "dev": "yarn build -w --no-compress"
   },
