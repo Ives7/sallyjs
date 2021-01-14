@@ -5,13 +5,13 @@
   "author": "",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/index.js",
+  "main": "lib/index.umd.js",
   "module": "lib/index.module.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest",
     "service": "rimraf lib & microbundle --alias @=. --tsconfig tsconfig.build.json",
-    "build": "yarn service -f cjs,esm",
+    "build": "yarn service -f umd,esm",
     "dev": "yarn build -w --no-compress"
   },
   "publishConfig": {
