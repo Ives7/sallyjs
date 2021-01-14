@@ -5,7 +5,7 @@
     "build": "lerna run build"
   },
   "devDependencies": {
-    "@sallyjs/linter":"^0.0.12",
+    "@sallyjs/linter":"^0.0.14",
     "husky": "^5.0.6",
     "lint-staged": "^10.5.3",
     "lerna": "^3.22.1",
