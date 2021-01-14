@@ -1,6 +1,6 @@
 import { join, resolve } from "path"
 import git from "simple-git"
-import { copy, writeFile, mkdir } from "fs-extra"
+import { copy, writeFile } from "fs-extra"
 import { ignoreRaw } from "./ignore"
 const { spawn } = require("child_process")
 
@@ -28,7 +28,6 @@ export const pro = async (name: string) => {
     )
 
     await writeFile(join(cwd, ".gitignore"), ignoreRaw)
-    await mkdir(join(cwd, "packages"))
     await git().cwd(cwd).init()
 
     const command = spawn("yarn", ["install"], {
